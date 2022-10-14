@@ -1,4 +1,17 @@
-*{
+H1{
     text-align: center;
-    color: aquamarine;
+}
+.links{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 auto;
+    background-color: antiquewhite;
+    width:10%;
+    
+
+}
+.links>a:hover{
+   background: gray;
 }
