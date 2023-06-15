@@ -50,9 +50,9 @@
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="me-2" viewBox="0 0 24 24">><path d="M20 9v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9"/><path d="M9 22V12h6v10M2 10.6L12 2l10 8.6"/></svg>
         <strong>Home</strong>
       </a>
-      <strong><a href="#" style="color:white;text-decoration: none;">項目1</a></strong>
-      <strong><a href="#" style="color:white;text-decoration: none;">項目2</a></strong>
-      <strong><a href="#" style="color:white;text-decoration: none;">項目3</a></strong>
+      <strong><a href="#" style="color:white;text-decoration: none;display: none;" disabled>項目1</a></strong>
+      <strong><a href="#" style="color:white;text-decoration: none;display: none;" disabled>項目2</a></strong>
+      <strong><a href="#" style="color:white;text-decoration: none;display: none;" >項目3</a></strong>
       <strong><a href="#bikestop" style="color:white;text-decoration: none;">youbike站點即時狀況</a></strong>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
@@ -71,8 +71,8 @@
         <h1 class="fw-light">主頁</h1>
         <p class="lead text-muted" style="font-weight: 600;">這裡是charon的主頁，但是他還沒想好要放些什麼。</p>
         <p>
-          <a href="#" class="btn btn-primary my-2">Main call to action</a>
-          <a href="#" class="btn btn-secondary my-2">Secondary action</a>
+          <!-- <a href="#" class="btn btn-primary my-2">Main call to action</a>
+          <a href="#" class="btn btn-secondary my-2">Secondary action</a> -->
         </p>
       </div>
     </div>
@@ -87,7 +87,8 @@
             <title>Placeholder</title>
             <text x="50%" y="50%" fill="#eceeef" dy=".3em"><img src="./pic/iji.png" alt="" style="width: 419.725px;"></text>
             <div class="card-body">
-              <p class="card-text">網頁設計乙級學科練習系統</p>
+              <p class="card-text" style="font-weight: bold;">網頁設計乙級學科練習系統</p>
+              <p>一個簡易版的學科試題練習系統 可以選擇範圍進行練習或是測驗(還沒做完)</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <button type="button" class="btn btn-sm btn-outline-secondary"><a href="http://220.128.133.15/s1110418/2022iji/">View</a></button>
@@ -103,7 +104,8 @@
             <title>Placeholder</title>
             <text x="50%" y="50%" fill="#eceeef" dy=".3em"><img src="./pic/survey.png" alt="" style="width: 419.725px;"></text>
             <div class="card-body">
-              <p class="card-text">問卷系統</p>
+              <p class="card-text" style="font-weight: bold;">問卷系統</p>
+              <p>一個問卷系統 </p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <button type="button" class="btn btn-sm btn-outline-secondary"><a href="http://220.128.133.15/s1110418/php-survey-charonMc/">View</a></button>
@@ -114,7 +116,7 @@
             </div>
           </div>
         </div>
-        <div class="col" >
+        <!-- <div class="col" >
           <div class="card shadow-sm">
             <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
             <div class="card-body">
@@ -128,12 +130,14 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
         
         
       </div>
         <div class="py-5">
-          <h3>臺北市youbike站點</h3>
+          <h3>臺北市youbike站點 (<span style="color: blue;text-decoration-line: underline;" href="#" data-toggle="tooltip" title="這是一個即時更新的站點資訊">?</span>)</h3>
+
+        </div>  
           <table id="bikestop" class="display" style="width:100%">
             <thead>
               
@@ -154,12 +158,12 @@
 
 
 
-<footer class="text-info py-5">
+<footer class="text py-5" style="color: #943f3f; background-color: rgb(221, 221, 221);">
   <div class="container">
     <p class="float-end mb-1">
       <a href="#">Back to top</a>
     </p>
-    <p class="mb-1">Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
+    <p class="mb-1">Copyright &copy; 2023 charonMc</p>
     <p class="mb-0">New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a href="../getting-started/introduction/">getting started guide</a>.</p>
   </div>
 </footer>
@@ -283,4 +287,11 @@ VANTA.WAVES({
   scaleMobile: 1.00,
   color: 0x454e5c
 })
+
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();   
+});
+
+
+
 </script>
